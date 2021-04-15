@@ -1,0 +1,50 @@
+.banner {
+  background-image: url("../../../Image//1-1.jpg");
+  background-size: cover;
+  height: 600px;
+}
+.banner h2 {
+  font-family: "Mr De Haviland", cursive;
+  font-size: 70px;
+}
+.banner h1 {
+  font-size: 65px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  margin-top: -33px;
+}
+.banner p {
+  font-size: 20px;
+}
+
+
+@media (max-width: 575.98px) { 
+    .banner h2 {
+        font-size: 45px;
+      }
+      .banner h1 {
+        font-size: 40px;
+        margin: 20px 0;
+        /* margin-top: -10px; */
+      }
+ }
+
+@media (max-width: 767.98px) {
+  .banner h2 {
+    font-size: 55px;
+  }
+  .banner h1 {
+    font-size: 50px;
+    margin-top: -20px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .banner h2 {
+    font-size: 50px;
+  }
+  .banner h1 {
+    font-size: 45px;
+    margin-top: -10px;
+  }
+}
