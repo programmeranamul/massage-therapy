@@ -1,6 +1,14 @@
-
-.navbar-light .navbar-nav .nav-link{
-    color: #000;
-    margin: 0px 17px;
-    font-weight: 500;
+.navbar-light .navbar-nav .nav-link {
+  color: #000;
+  margin: 0px 17px;
+  font-weight: 500;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.logo{
+  width: 80px;
 }

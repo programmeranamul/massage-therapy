@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import woman1 from '../../../Image/woman1.jpg'
 import woman2 from '../../../Image/woman2.jpg'
 import woman3 from '../../../Image/woman3.jpg'
@@ -27,13 +27,25 @@ const testimonialData = [
 ]
 
 
+
 const Testimonials = () => {
+
+    const[testimonials, setTestimonials] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:8000/reviews')
+        .then(res => res.json())
+        .then(reviews => setTestimonials(reviews))
+    },[])
+
+
+
     return (
         <div className="container py-5">
             <h2 className="text-center mb-5">Testimonials</h2>
             <div className="row">
                 {
-                    testimonialData.map(testimonial => <Testimonial key={testimonial.name} testimonial={testimonial} />)
+                    testimonials.map(testimonial => <Testimonial key={testimonial._id} testimonial={testimonial} />)
                 }
             </div>
 

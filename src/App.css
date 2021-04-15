@@ -6,3 +6,11 @@
 .custom-color{
     color: #F9A392 !important;
 }
+.custom-height-100{
+    height: 100%;
+}
+
+.addAdmin{
+    background-color: #F4F7FC;
+    min-height: 100vh;
+}
