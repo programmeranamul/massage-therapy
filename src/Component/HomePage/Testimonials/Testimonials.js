@@ -26,14 +26,16 @@ const testimonialData = [
     }
 ]
 
-
+///////////
+// abar 
+//thamo
 
 const Testimonials = () => {
 
     const[testimonials, setTestimonials] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:8000/reviews')
+        fetch('https://fathomless-retreat-05696.herokuapp.com/reviews')
         .then(res => res.json())
         .then(reviews => setTestimonials(reviews))
     },[])
