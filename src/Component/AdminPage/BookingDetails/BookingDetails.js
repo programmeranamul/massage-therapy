@@ -7,10 +7,8 @@ const BookingDetails = ({ service }) => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const logedInUser = JSON.parse(localStorage.getItem('user'))
-    console.log(service)
 
     const onSubmit = (data) => { }
-
 
 
     const handelPayment = (paymentId) => {
@@ -20,12 +18,12 @@ const BookingDetails = ({ service }) => {
             service: service.serviceName,
             serviceDescription: service.serviceDescription,
             serviceImg: service.image,
-            bookingStatus :"painding",
+            bookingStatus: "painding",
             paymentId,
             placeTime: new Date(),
         };
 
-        fetch("https://fathomless-retreat-05696.herokuapp.com/bookingAservice", {
+        fetch("http://localhost:8000/bookingAservice", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

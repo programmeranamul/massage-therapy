@@ -20,7 +20,7 @@ const SideBar = ({ url }) => {
     const [isAdmin, setIsAdmin] = useState(false)
 
     useEffect(() => {
-        fetch('https://fathomless-retreat-05696.herokuapp.com/isAdmin', {
+        fetch('http://localhost:8000/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: logInUser.email })
@@ -34,12 +34,6 @@ const SideBar = ({ url }) => {
 
     const handelLogOut = () => {
         firebase.auth().signOut().then(() => {
-            // const singOutUser = {
-            //     email: "",
-            //     displayName: "",
-            //     photoURL: "",
-            // };
-            // setLogedInUser(singOutUser)
             localStorage.clear()
             history.push("/")
         }).catch((error) => {
@@ -56,46 +50,47 @@ const SideBar = ({ url }) => {
                     </Link>
                 </li>
 
+                {isAdmin ? <div>
+                    <li >
+                        <Link to={`${url}/adminBookingList`}>
+                            <FontAwesomeIcon icon={faGripHorizontal} /> <span>Booking List</span>
+                        </Link>
+                    </li>
 
-                <li >
-                    <Link to={`${url}/booking`}>
-                        <FontAwesomeIcon icon={faGripHorizontal} /> <span>Book</span>
-                    </Link>
-                </li>
-                <li >
-                    <Link to={`${url}/customarBookingList`}>
-                        <FontAwesomeIcon icon={faGripHorizontal} /> <span>Booking List</span>
-                    </Link>
-                </li>
-                <li >
-                    <Link to={`${url}/review`}>
-                        <FontAwesomeIcon icon={faGripHorizontal} /> <span>Review</span>
-                    </Link>
-                </li>
+                    <li>
+                        <Link to={`${url}/makeAdmin`} >
+                            <FontAwesomeIcon icon={faCalendar} /> <span>Add Admin</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={`${url}/addService`} >
+                            <FontAwesomeIcon icon={faUsers} /> <span>Add Service</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={`${url}/manageService`} >
+                            <FontAwesomeIcon icon={faUsers} /> <span>Manage Service</span>
+                        </Link>
+                    </li>
+                </div> : <div>
 
-
-                {
-                    isAdmin && <div>                       
-
-
-                        <li>
-                            <Link to={`${url}/makeAdmin`} >
-                                <FontAwesomeIcon icon={faCalendar} /> <span>Add Admin</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={`${url}/addService`} >
-                                <FontAwesomeIcon icon={faUsers} /> <span>Add Service</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={`${url}/manageService`} >
-                                <FontAwesomeIcon icon={faUsers} /> <span>Manage Service</span>
-                            </Link>
-                        </li>
-                    </div>
+                    <li >
+                        <Link to={`${url}/booking`}>
+                            <FontAwesomeIcon icon={faGripHorizontal} /> <span>Book</span>
+                        </Link>
+                    </li>
+                    <li >
+                        <Link to={`${url}/customarBookingList`}>
+                            <FontAwesomeIcon icon={faGripHorizontal} /> <span>Booking List</span>
+                        </Link>
+                    </li>
+                    <li >
+                        <Link to={`${url}/review`}>
+                            <FontAwesomeIcon icon={faGripHorizontal} /> <span>Review</span>
+                        </Link>
+                    </li>
+                </div>
                 }
-
 
             </ul>
             <div>

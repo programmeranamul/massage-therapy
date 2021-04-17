@@ -7,15 +7,14 @@ import BookingDetails from '../BookingDetails/BookingDetails';
 const Booking = () => {
     const { id } = useParams();
     const [service, setService] = useState({})
-   
-        useEffect(() => {
-            fetch("https://fathomless-retreat-05696.herokuapp.com/service/" + id || '')
-                .then((res) => res.json())
-                .then((data) => {
-                    setService(data);
-                });
-        }, [id]);
-  
+
+    useEffect(() => {
+        fetch("http://localhost:8000/service/" + id || '')
+            .then((res) => res.json())
+            .then((data) => {
+                setService(data);
+            });
+    }, [id]);
 
 
     return (

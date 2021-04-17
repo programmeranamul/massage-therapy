@@ -6,8 +6,6 @@ import {
     CardCvcElement,
     CardExpiryElement
 } from "@stripe/react-stripe-js";
-import './SpliteCardForm.css'
-
 
 
 const useOptions = () => {
@@ -35,7 +33,7 @@ const useOptions = () => {
     return options;
 };
 
-const SplitCardForm = ({handelPayment}) => {
+const SplitCardForm = ({ handelPayment }) => {
     const stripe = useStripe();
     const elements = useElements();
     const options = useOptions();
@@ -58,12 +56,11 @@ const SplitCardForm = ({handelPayment}) => {
         });
 
 
-
         if (error) {
             console.log(error)
             setPaymentError(error.message)
             setPaymentSuccess(null)
-        } else {           
+        } else {
             setPaymentError(null)
             setPaymentSuccess(paymentMethod.id)
             handelPayment(paymentMethod.id)

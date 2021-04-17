@@ -11,7 +11,7 @@ const ManageService = () => {
     const [services, setServices] = useState([])
 
     const fetchServices = () => {
-        fetch('https://fathomless-retreat-05696.herokuapp.com/services')
+        fetch('http://localhost:8000/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }
@@ -24,7 +24,7 @@ const ManageService = () => {
 
     const handelDeletProduct = (productId) => {
         fetch(
-            `https://fathomless-retreat-05696.herokuapp.com/deletService/${productId}`,
+            `http://localhost:8000/deletService/${productId}`,
             {
                 method: "delete",
                 headers: {
@@ -71,14 +71,13 @@ const ManageService = () => {
                     <h3>No Service Found </h3>
                     <Button
                         as={Link}
-                        to="/addProduct"
+                        to="/"
                         variant="primary"
                         className="mt-3"
                         type="button"
-                    > Add Product</Button>
+                    > Go To Home</Button>
                 </article>
             )}
-
 
         </section>
     );

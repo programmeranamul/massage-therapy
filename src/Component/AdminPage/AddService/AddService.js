@@ -10,7 +10,6 @@ import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
 const AddService = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
-
     const onSubmit = (data) => {
 
         const formData = new FormData()
@@ -19,8 +18,7 @@ const AddService = () => {
         formData.append('serviceDescription', data.serviceDescription)
         formData.append('serviceCharge', data.serviceCharge)
 
-
-        fetch('https://fathomless-retreat-05696.herokuapp.com/addService', {
+        fetch('http://localhost:8000/addService', {
             method: 'POST',
             body: formData
         })
@@ -49,7 +47,6 @@ const AddService = () => {
                             )}
                         </Form.Group>
 
-
                         <Form.Group as={Col}>
                             <label htmlFor="file">Add Photo</label>
                             <div className="upload-image-area">
@@ -67,8 +64,9 @@ const AddService = () => {
                                     <p className="text-danger">This field is required</p>
                                 )}
                             </div>
-                            </Form.Group>
+                        </Form.Group>
                     </Form.Row>
+
                     <Form.Row>
                         <Form.Group as={Col}>
                             <Form.Label>Example textarea</Form.Label>

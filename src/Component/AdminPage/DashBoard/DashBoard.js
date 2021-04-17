@@ -14,11 +14,10 @@ import AddReview from '../AddReview/AddReview';
 import ManageService from '../ManageService/ManageService';
 import Booking from '../Booking/Booking';
 import CustomarBookingList from '../CustomarBookingList/CustomarBookingList'
+import AdminBookingList from '../AdminBookingList/AdminBookingList';
 
 const DashBoard = () => {
     const { path, url } = useRouteMatch();
-    
-
 
     return (
         <main>
@@ -51,6 +50,9 @@ const DashBoard = () => {
                         </Route>
                         <Route path={`${path}/customarBookingList`}>
                             <CustomarBookingList />
+                        </Route>
+                        <Route path={`${path}/adminBookingList`}>
+                            <AdminBookingList />
                         </Route>
                     </Switch>
                 </div>

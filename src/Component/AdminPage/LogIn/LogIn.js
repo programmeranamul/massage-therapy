@@ -39,7 +39,6 @@ const LogIn = () => {
                     errorMassege: "",
                 };
                 setLogedInUser(userDetails);
-                // sessionStorage.setItem('userDetails', userDetails)
                 localStorage.setItem('user', JSON.stringify(userDetails))
                 getAuthToken()
                 history.replace(from);

@@ -28,15 +28,11 @@ label {
   padding: 1px 14px;
   border-radius: 6px;
 }
-.add-service{
-    background-color:#F4F7FC ;
-    min-height: 100vh;
+.add-service {
+  background-color: #f4f7fc;
+  min-height: 100vh;
 }
-.add-service .add-service-form-container{
-    /* margin-left: 65px; */
-}
-.add-service form{
-    background-color: white;
-    border-radius: 10px;
-
+.add-service form {
+  background-color: white;
+  border-radius: 10px;
 }
