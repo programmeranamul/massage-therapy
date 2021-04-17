@@ -58,13 +58,13 @@ const SideBar = ({ url }) => {
 
 
                 <li >
-                    <Link to={`${url}/book`}>
+                    <Link to={`${url}/booking`}>
                         <FontAwesomeIcon icon={faGripHorizontal} /> <span>Book</span>
                     </Link>
                 </li>
                 <li >
-                    <Link to={`${url}/bookingList`}>
-                        <FontAwesomeIcon icon={faGripHorizontal} /> <span>Order List</span>
+                    <Link to={`${url}/customarBookingList`}>
+                        <FontAwesomeIcon icon={faGripHorizontal} /> <span>Booking List</span>
                     </Link>
                 </li>
                 <li >
@@ -75,12 +75,7 @@ const SideBar = ({ url }) => {
 
 
                 {
-                    isAdmin && <div>
-                        <li >
-                            <Link to={`${url}/orderList`}>
-                                <FontAwesomeIcon icon={faGripHorizontal} /> <span>Order List</span>
-                            </Link>
-                        </li>
+                    isAdmin && <div>                       
 
 
                         <li>
@@ -94,7 +89,7 @@ const SideBar = ({ url }) => {
                             </Link>
                         </li>
                         <li>
-                            <Link to={`${url}/manegService`} >
+                            <Link to={`${url}/manageService`} >
                                 <FontAwesomeIcon icon={faUsers} /> <span>Manage Service</span>
                             </Link>
                         </li>

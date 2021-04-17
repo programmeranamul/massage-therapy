@@ -8,6 +8,7 @@ import {
 import { createContext, useState } from 'react';
 import DashBoard from './Component/AdminPage/DashBoard/DashBoard';
 import PrivateRoute from './Component/AdminPage/PrivateRoute/PrivateRoute';
+
 export const userContext = createContext();
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           </Route>
           <PrivateRoute path="/admin">
             <DashBoard />
-          </PrivateRoute>
+          </PrivateRoute>         
         </Switch>
       </Router>
     </userContext.Provider>

@@ -10,7 +10,7 @@
     height: 100%;
 }
 
-.addAdmin{
+.addAdmin,.booking-page, .booking-list{
     background-color: #F4F7FC;
     min-height: 100vh;
 }

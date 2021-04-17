@@ -26,9 +26,6 @@ const testimonialData = [
     }
 ]
 
-///////////
-// abar 
-//thamo
 
 const Testimonials = () => {
 

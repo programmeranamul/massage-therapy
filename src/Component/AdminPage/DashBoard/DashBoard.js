@@ -11,6 +11,9 @@ import AddAdmin from '../AddAdmin/AddAdmin'
 import AddService from '../AddService/AddService';
 import { userContext } from '../../../App';
 import AddReview from '../AddReview/AddReview';
+import ManageService from '../ManageService/ManageService';
+import Booking from '../Booking/Booking';
+import CustomarBookingList from '../CustomarBookingList/CustomarBookingList'
 
 const DashBoard = () => {
     const { path, url } = useRouteMatch();
@@ -36,6 +39,18 @@ const DashBoard = () => {
                         </Route>
                         <Route path={`${path}/review`}>
                             <AddReview />
+                        </Route>
+                        <Route path={`${path}/manageService`}>
+                            <ManageService />
+                        </Route>
+                        <Route exact path={`${path}/booking`}>
+                            <Booking />
+                        </Route>
+                        <Route path={`${path}/booking/:id`}>
+                            <Booking />
+                        </Route>
+                        <Route path={`${path}/customarBookingList`}>
+                            <CustomarBookingList />
                         </Route>
                     </Switch>
                 </div>
