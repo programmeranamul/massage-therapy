@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Form } from 'react-bootstrap';
+import React from 'react';
+import { Col, Form, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import ProcessPayment from '../ProcessPayment/ProcessPayment';
 
@@ -34,7 +34,6 @@ const BookingDetails = ({ service }) => {
             .then((data) => {
                 if (data) {
                     alert("Your order place successfully");
-
                 }
             });
     };
@@ -58,25 +57,40 @@ const BookingDetails = ({ service }) => {
                         <p className="text-danger">This field is required</p>
                     )}
                 </Form.Group>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="emailFild">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control
+                                type="text"
+                                defaultValue={logedInUser.email}
+                                placeholder="Email"
+                                {...register("email", {
+                                    required: true,
+                                    pattern: /^\S+@\S+\.\S+$/
+                                })}
+                            />
+                            {errors?.email?.type === "required" && (
+                                <p className="text-danger">This field is required</p>
+                            )}
+                            {errors?.email?.type === "pattern" && (
+                                <p className="text-danger">Write a valid e-mail</p>
+                            )}
+                        </Form.Group>
 
-                <Form.Group controlId="emailFild">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control
-                        type="text"
-                        defaultValue={logedInUser.email}
-                        placeholder="Email"
-                        {...register("email", {
-                            required: true,
-                            pattern: /^\S+@\S+\.\S+$/
-                        })}
-                    />
-                    {errors?.email?.type === "required" && (
-                        <p className="text-danger">This field is required</p>
-                    )}
-                    {errors?.email?.type === "pattern" && (
-                        <p className="text-danger">Write a valid e-mail</p>
-                    )}
-                </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId="emailFild">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control
+                                type="text"
+                                readOnly
+                                defaultValue={"$"+ service.serviceCharge}
+                                placeholder="ServiceCharge"
+                            />
+                        </Form.Group>
+                    </Col>
+                </Row>
 
                 <Form.Group controlId="serviceNameFild">
                     <Form.Label>Service Name</Form.Label>
@@ -97,7 +111,6 @@ const BookingDetails = ({ service }) => {
                 />
             </Form>
             <ProcessPayment handelPayment={handelPayment} />
-            <p>Your Service charged will be ${service.serviceCharge}</p>
         </div>
     );
 };

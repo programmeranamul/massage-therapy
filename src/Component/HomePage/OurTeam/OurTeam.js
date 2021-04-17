@@ -6,9 +6,9 @@ import mim from './../../../Image/team3.jpg'
 
 
 const teamData = [
-    { name: "Jue Akrar", facebook: '//facebook.com', instagram: '//instagram.com', img: jue },
-    { name: "Najma Sajrin", facebook: '//facebook.com', instagram: '//instagram.com', img: najma },
-    { name: "Mim Moni", facebook: '//facebook.com', instagram: '//instagram.com', img: mim },
+    { name: "Jue Akrar", facebook: '//facebook.com', instagram: '//instagram.com', img: jue, catagory:"Massage therapy expert" },
+    { name: "Najma Sajrin", facebook: '//facebook.com', instagram: '//instagram.com', img: najma, catagory: "Spa massage expert" },
+    { name: "Mim Moni", facebook: '//facebook.com', instagram: '//instagram.com', img: mim, catagory: "Sports massage expert" },
 ]
 
 const OurTeam = () => {

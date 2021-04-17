@@ -12,8 +12,6 @@ import firebase from "firebase/app";
 const SideBar = ({ url }) => {
     const history = useHistory();
 
-    const [logedInUser, setLogedInUser] = useContext(userContext)
-    //const [singOutUser, setSingOutUser] = useState({})
 
     const logInUser = JSON.parse(localStorage.getItem('user'))
 

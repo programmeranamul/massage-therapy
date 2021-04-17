@@ -2,6 +2,7 @@
   background-image: url("../../../Image//1-1.jpg");
   background-size: cover;
   height: 600px;
+  background-position: center center;
 }
 .banner h2 {
   font-family: "Mr De Haviland", cursive;
@@ -16,18 +17,20 @@
 .banner p {
   font-size: 20px;
 }
+.banner-info{
+  padding-top: 90px;
+}
 
-
-@media (max-width: 575.98px) { 
-    .banner h2 {
-        font-size: 45px;
-      }
-      .banner h1 {
-        font-size: 40px;
-        margin: 20px 0;
-        /* margin-top: -10px; */
-      }
- }
+@media (max-width: 575.98px) {
+  .banner h2 {
+    font-size: 45px;
+  }
+  .banner h1 {
+    font-size: 40px;
+    margin: 20px 0;
+    /* margin-top: -10px; */
+  }
+}
 
 @media (max-width: 767.98px) {
   .banner h2 {

@@ -2,10 +2,10 @@ import React from 'react';
 import './Testimonial.css'
 
 const Testimonial = ({ testimonial }) => {
-   const {name, companyName,massage,imgUrl } = testimonial
+   const {name, address,massage,imgUrl } = testimonial
     return (
         <div className="col-md-4 d-flex">
-            <div className="card">
+            <div className="card mb-4 my-md-0">
                 <div className="card-body py-4">
                     <p className="card-text">{massage}</p>
                 </div>
@@ -13,7 +13,7 @@ const Testimonial = ({ testimonial }) => {
                     <img src={imgUrl} alt={name} />
                     <div>
                         <h6>{name}</h6>
-                        <p className="m-0">{companyName}</p>
+                        <p className="m-0">{address}</p>
                     </div>
                 </div>
             </div>

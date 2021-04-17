@@ -6,14 +6,12 @@ import { Link } from "react-router-dom";
 import { userContext } from '../../../App';
 
 const NavBar = () => {
-    const [logedInUser, setLogedInUser] = useContext(userContext);
-    
-    const logInUser = JSON.parse(localStorage.getItem('user'))
-    
+    const logInUser = JSON.parse(localStorage.getItem('user'))    
+
     return (
-        <header className="container">
+        <header className=" bg-primary" >
             <Navbar expand="md">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand as={Link} to='/'>
                     <img src={logo} alt="Logo" className="logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

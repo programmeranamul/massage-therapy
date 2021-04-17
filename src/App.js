@@ -8,6 +8,7 @@ import {
 import { createContext, useState } from 'react';
 import DashBoard from './Component/AdminPage/DashBoard/DashBoard';
 import PrivateRoute from './Component/AdminPage/PrivateRoute/PrivateRoute';
+import NoMatch from './Component/HomePage/NoMatch/NoMatch';
 
 export const userContext = createContext();
 
@@ -28,7 +29,10 @@ function App() {
           </Route>
           <PrivateRoute path="/admin">
             <DashBoard />
-          </PrivateRoute>         
+          </PrivateRoute> 
+          <Route path="*">
+            <NoMatch />
+          </Route>        
         </Switch>
       </Router>
     </userContext.Provider>

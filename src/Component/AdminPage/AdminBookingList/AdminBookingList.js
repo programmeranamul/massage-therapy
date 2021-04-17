@@ -18,10 +18,7 @@ const AdminBookingList = () => {
 
     return (
         <section className="admin-order-list">
-            <AdminPageTitle title={"Booking List"} />
-            {/* {
-                bookings.map(booking => <AdminOrderListTable key={booking._id} />)
-            } */}
+            <AdminPageTitle title={"Booking List"} />           
             <AdminOrderListTable bookings={bookings} />
         </section>
     );

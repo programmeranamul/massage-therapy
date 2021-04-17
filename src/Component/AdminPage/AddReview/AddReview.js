@@ -1,8 +1,10 @@
 import React from 'react';
 import AdminPageTitle from '../AdminPageTitle/AdminPageTitle';
 import { useForm } from "react-hook-form";
+import { useHistory } from 'react-router';
 
 const AddReview = () => {
+    const history = useHistory();
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const logInUser = JSON.parse(localStorage.getItem('user'))
@@ -10,7 +12,7 @@ const AddReview = () => {
     const onSubmit = (data) => {
         const reviewData = {
             name: data.name,
-            companyName: data.companyName,
+            address: data.address,
             massage: data.massage,
             imgUrl: logInUser.photoURL
         }
@@ -23,8 +25,9 @@ const AddReview = () => {
             body: JSON.stringify(reviewData)
         })
             .then(res => res.json())
-            .then(data => alert("Review Added SuccessFully !!"))
-
+            .then(data => {
+                alert("Review Added SuccessFully !!")              
+            })
 
 
     }
@@ -40,9 +43,9 @@ const AddReview = () => {
                         )}
                     </div>
                     <div className=" form-group">
-                        <input type="text" placeholder="Last Name Here" className="form-control" {...register("companyName", { required: true })} />
+                        <input type="text" placeholder="Address" className="form-control" {...register("address", { required: true })} />
 
-                        {errors?.companyName?.type === "required" && (
+                        {errors?.address?.type === "required" && (
                             <p className="text-danger">This field is required</p>
                         )}
 

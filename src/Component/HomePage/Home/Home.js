@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from '../../ShearComponent/Footer/Footer';
+import Blogs from '../Blogs/Blogs';
 import Header from '../Header/Header';
 import OurTeam from '../OurTeam/OurTeam';
 import SendMessage from '../SendMessage/SendMessage';
@@ -8,11 +9,12 @@ import Testimonials from '../Testimonials/Testimonials';
 
 const Home = () => {
     return (
-        <>           
+        <>
             <Header />
             <Services />
             <Testimonials />
             <OurTeam />
+            <Blogs />
             <SendMessage />
             <Footer />
         </>

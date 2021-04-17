@@ -12,3 +12,9 @@
 .logo{
   width: 80px;
 }
+.navbar-light .navbar-nav .nav-link{
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color: rgb(151, 139, 139);
+}

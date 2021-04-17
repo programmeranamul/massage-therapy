@@ -7,6 +7,7 @@ import { useHistory, useLocation } from "react-router";
 import './LogIn.css'
 import firebaseConfig from './Firebase.Config'
 import { userContext } from '../../../App';
+import NavBar from '../../ShearComponent/NavBar/NavBar';
 
 
 if (!firebase.apps.length) {
@@ -17,7 +18,6 @@ if (!firebase.apps.length) {
 
 const LogIn = () => {
     const [logedInUser, setLogedInUser] = useContext(userContext);
-
     const history = useHistory();
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
@@ -66,6 +66,8 @@ const LogIn = () => {
 
 
     return (
+        <>
+        <NavBar/>
         <section className="container LogIn-Section">
             <div className="row  mt-5 text-left justify-content-center">
                 <div className="col-md-6">
@@ -80,6 +82,7 @@ const LogIn = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 
