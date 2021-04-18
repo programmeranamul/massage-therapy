@@ -68,22 +68,22 @@ const LogIn = () => {
 
     return (
         <>
-        <NavBar/>
-        <section className="container LogIn-Section my-5">
-            <div className="row text-left justify-content-center">
-                <div className="col-md-6">
-                    <h4 className="text-center mb-4 mt-5">Continue With Google</h4>
-                    <button
-                        className="login-button py-2 mb-5 w-100 text-left btn-danger"
-                        onClick={handelGoogleSingIn}
-                    ><FontAwesomeIcon icon={faGoogle} className="google-icon" />Continue With Google</button>
-                    {logedInUser.isError && (
-                        <p className="text-danger mt-3">{logedInUser.errorMassege}</p>
-                    )}
+            <NavBar />
+            <section className="container LogIn-Section my-5">
+                <div className="row text-left justify-content-center">
+                    <div className="col-md-6">
+                        <h4 className="text-center mb-4 mt-5">Continue With Google</h4>
+                        <button
+                            className="login-button py-2 mb-5 w-100 text-left btn-danger"
+                            onClick={handelGoogleSingIn}
+                        ><FontAwesomeIcon icon={faGoogle} className="google-icon" />Continue With Google</button>
+                        {logedInUser.isError && (
+                            <p className="text-danger mt-3">{logedInUser.errorMassege}</p>
+                        )}
+                    </div>
                 </div>
-            </div>
-        </section>
-        <Footer />
+            </section>
+            <Footer />
         </>
     );
 };

@@ -1,15 +1,14 @@
 import React from 'react';
 import image from '../../../Image/Vector-Smart-Object-6.webp'
-
 import happyClient1 from '../../../Image/massage1.jpg'
 import happyClient2 from '../../../Image/massage2.jpg'
-import happyClient3 from '../../../Image/massage3.jpg'
-import HappyClientCard from './HappyClientCard/HappyClientCard';
+import happyClient3 from '../../../Image/happyClient3.jpg'
+import HappyClientCard from '../HappyClientCard/HappyClientCard'
 
 const happayClientData = [
-    {service: "SPA MASSAGE", client: 209, image: happyClient1 },
-    {service: "MASSAGE THERAPY", client: 126, image: happyClient2 },
-    {service: "SPORTS MASSAGE", client: 343, image: happyClient3 },
+    { service: "SPA MASSAGE", client: 209, image: happyClient1 },
+    { service: "MASSAGE THERAPY", client: 126, image: happyClient2 },
+    { service: "SPORTS MASSAGE", client: 343, image: happyClient3 },
 ]
 
 

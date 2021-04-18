@@ -2,7 +2,7 @@ import React from 'react';
 import './Testimonial.css'
 
 const Testimonial = ({ testimonial }) => {
-   const {name, address,massage,imgUrl } = testimonial
+    const { name, address, massage, imgUrl } = testimonial
     return (
         <div className="col-md-4 d-flex">
             <div className="card mb-4 my-md-0">

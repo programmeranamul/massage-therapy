@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { userContext } from '../../../App';
 
 const NavBar = () => {
-    const logInUser = JSON.parse(localStorage.getItem('user'))    
+    const logInUser = JSON.parse(localStorage.getItem('user'))
 
     return (
         <header className=" bg-primary" >

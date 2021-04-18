@@ -7,8 +7,6 @@ const CustomarBookingList = () => {
     const logInUser = JSON.parse(localStorage.getItem('user'))
     const [bookingList, setBookingList] = useState([])
 
-
-
     useEffect(() => {
         fetch('https://fathomless-retreat-05696.herokuapp.com/customarBookingsList', {
             method: 'POST',

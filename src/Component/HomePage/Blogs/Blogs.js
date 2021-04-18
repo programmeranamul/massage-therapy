@@ -22,7 +22,6 @@ const Blogs = () => {
                     blogData.map(blog => <Blog key={blog.title} blog={blog} />)
                 }
             </div>
-
         </section>
     );
 };

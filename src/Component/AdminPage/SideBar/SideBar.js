@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faSignOutAlt, faPlus, faGripHorizontal, faUsers, faComments, faList } from "@fortawesome/free-solid-svg-icons";
+import { faSignOutAlt, faPlus, faGripHorizontal, faUsers, faComments, faList } from "@fortawesome/free-solid-svg-icons";
 import './SideBar.css'
 import logo from '../../../Image/logo1.png'
 
@@ -10,11 +10,9 @@ import firebase from "firebase/app";
 
 
 const SideBar = ({ url }) => {
+
     const history = useHistory();
-
-
     const logInUser = JSON.parse(localStorage.getItem('user'))
-
     const [isAdmin, setIsAdmin] = useState(false)
 
     useEffect(() => {

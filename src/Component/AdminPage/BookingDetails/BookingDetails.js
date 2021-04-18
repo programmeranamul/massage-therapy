@@ -5,8 +5,6 @@ import ProcessPayment from '../ProcessPayment/ProcessPayment';
 
 const BookingDetails = ({ service }) => {
     const history = useHistory();
-
-
     const logedInUser = JSON.parse(localStorage.getItem('user'))
 
     const handelPayment = (paymentId) => {

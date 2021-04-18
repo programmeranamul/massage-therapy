@@ -9,7 +9,7 @@ import { createContext, useState } from 'react';
 import DashBoard from './Component/AdminPage/DashBoard/DashBoard';
 import PrivateRoute from './Component/AdminPage/PrivateRoute/PrivateRoute';
 import NoMatch from './Component/HomePage/NoMatch/NoMatch';
-import Profile from './Component/ShearComponent/NavBar/Profile/Profile';
+import Profile from './Component/HomePage/Profile/Profile';
 
 export const userContext = createContext();
 

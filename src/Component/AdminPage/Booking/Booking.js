@@ -16,7 +16,7 @@ const Booking = () => {
                 setService(data);
             });
     }, [id]);
-   
+
 
     return (
         <section className="book-page">

@@ -14,8 +14,8 @@ const Home = () => {
             <Header />
             <Services />
             <HappyClient />
-            <Testimonials />            
-            <OurTeam />            
+            <Testimonials />
+            <OurTeam />
             <Blogs />
             <SendMessage />
             <Footer />

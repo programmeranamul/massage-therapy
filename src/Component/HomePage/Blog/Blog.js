@@ -1,7 +1,7 @@
 import React from 'react';
 import './Blog.css'
 
-const Blog = ({blog}) => {
+const Blog = ({ blog }) => {
     const { catagory, title, date, postBy, image } = blog
     return (
         <div className="col-md-4 mb-5 mb-md-0">

@@ -26,11 +26,11 @@ const AddReview = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert("Review Added SuccessFully !!")              
+                alert("Review Added SuccessFully !!")
             })
-
-
     }
+
+    
     return (
         <section className="review">
             <AdminPageTitle title={"Review"} />

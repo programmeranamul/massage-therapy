@@ -16,7 +16,7 @@ const AdminBookingList = () => {
 
     return (
         <section className="admin-order-list">
-            <AdminPageTitle title={"Booking List"} />           
+            <AdminPageTitle title={"Booking List"} />
             <AdminOrderListTable bookings={bookings} />
         </section>
     );

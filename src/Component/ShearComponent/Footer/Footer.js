@@ -26,9 +26,7 @@ const QuickLinks = [
     { name: "Sales", link: "/sales" },
     { name: "Contact", link: "/contact" },
     { name: "Our blog", link: "/ourBlog" },
-
 ]
-
 
 const Footer = () => {
     return (

@@ -16,7 +16,7 @@ const OurTeamCard = ({ teamMembar }) => {
                         <a target="_blanck" href={facebook}>
                             <FontAwesomeIcon className="icon" icon={faFacebookF}
                             />
-                        </a>                        
+                        </a>
                         <a target="_blanck" href={instagram}>
                             <FontAwesomeIcon className="icon" icon={faInstagram} />
                         </a>
