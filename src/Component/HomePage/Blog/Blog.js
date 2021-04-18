@@ -4,7 +4,7 @@ import './Blog.css'
 const Blog = ({blog}) => {
     const { catagory, title, date, postBy, image } = blog
     return (
-        <div className="col-md-4 mb-4 mb-md-0">
+        <div className="col-md-4 mb-5 mb-md-0">
             <div className="card blog-card">
                 <img src={image} alt={title} className="card-img-top" />
                 <div className="card-body">

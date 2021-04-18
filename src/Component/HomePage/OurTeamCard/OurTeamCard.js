@@ -6,7 +6,7 @@ import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 const OurTeamCard = ({ teamMembar }) => {
     const { name, facebook, instagram, img, catagory } = teamMembar
     return (
-        <div className="col-sm-4 text-center d-md-flex flex-column mb-3 mb-md-0">
+        <div className="col-md-4 text-center d-md-flex flex-column mb-5 mb-md-0">
             <div className="card">
                 <img src={img} alt={name} className="card-img-top team-member-image" />
                 <div className="card-body">
