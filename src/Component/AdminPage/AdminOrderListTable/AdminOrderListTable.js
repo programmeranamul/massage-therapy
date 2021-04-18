@@ -4,9 +4,6 @@ import './AdminBookingTable.css'
 
 const AdminOrderListTable = ({ bookings, fetchAdminBookingList }) => {
 
-    console.log(fetchAdminBookingList)
-
-
     const handelStatusUpdate = (e, booking) => {
 
         const updateStatus = {

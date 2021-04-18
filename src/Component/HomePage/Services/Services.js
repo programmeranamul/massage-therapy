@@ -1,16 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import image from '../../../Image/Vector-Smart-Object-6.webp'
+import Spinner from '../../ShearComponent/Spinner/Spinner';
 import ServiceCard from '../ServiceCard/ServiceCard'
 
 const Services = () => {
     const [services, setServices] = useState([])
+    const [spinner, setSpinner] = useState(false);
+
 
     useEffect(() => {
+        setSpinner(true);
         fetch('https://fathomless-retreat-05696.herokuapp.com/services')
             .then(res => res.json())
-            .then(data => setServices(data))
+            .then(data => {
+                setServices(data)
+                setSpinner(false)
+            })
 
     }, [])
+
+    if (spinner) {
+        return <Spinner />;
+    }
 
     return (
         <section className="py-5 container">
