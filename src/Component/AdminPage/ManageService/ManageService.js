@@ -2,21 +2,28 @@ import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
 import AdminPageTitle from '../AdminPageTitle/AdminPageTitle';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import './ManageService.css'
+import Spinner from '../../ShearComponent/Spinner/Spinner';
 
 const ManageService = () => {
+
+    const [spinner, setSpinner] = useState(false);
 
     const [services, setServices] = useState([])
 
     const fetchServices = () => {
+        setSpinner(true);
         fetch('https://fathomless-retreat-05696.herokuapp.com/services')
             .then(res => res.json())
-            .then(data => setServices(data))
+            .then(data =>{ 
+                setServices(data)
+                setSpinner(false)
+            })
     }
 
-    useEffect(() => {
+    useEffect(() => {        
         fetchServices()
     }, [])
 
@@ -35,6 +42,9 @@ const ManageService = () => {
             .then(data => fetchServices())
     };
 
+    if (spinner) {
+        return <Spinner />;
+    }
 
     return (
         <section className="container maneg-product-container">

@@ -2,7 +2,10 @@ import React from 'react';
 import { Dropdown, Table } from 'react-bootstrap';
 import './AdminBookingTable.css'
 
-const AdminOrderListTable = ({ bookings }) => {
+const AdminOrderListTable = ({ bookings, fetchAdminBookingList }) => {
+
+    console.log(fetchAdminBookingList)
+
 
     const handelStatusUpdate = (e, booking) => {
 
@@ -20,6 +23,7 @@ const AdminOrderListTable = ({ bookings }) => {
             .then(res => res.json())
             .then(data => {
                 alert("Status Updated Successfully")
+                fetchAdminBookingList()
             })
     }
 
@@ -51,7 +55,8 @@ const AdminOrderListTable = ({ bookings }) => {
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu>
-                                            <Dropdown.Item onClick={(e) => handelStatusUpdate(e, booking)}>Painding</Dropdown.Item>  <Dropdown.Item onClick={(e) => handelStatusUpdate(e, booking)}>On going</Dropdown.Item>
+                                            <Dropdown.Item onClick={(e) => handelStatusUpdate(e, booking)}>Painding</Dropdown.Item>
+                                            <Dropdown.Item onClick={(e) => handelStatusUpdate(e, booking)}>On going</Dropdown.Item>
                                             <Dropdown.Item onClick={(e) => handelStatusUpdate(e, booking)}>Done</Dropdown.Item>
                                         </Dropdown.Menu>
 

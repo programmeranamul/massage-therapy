@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Form, Row } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 import ProcessPayment from '../ProcessPayment/ProcessPayment';
@@ -6,6 +6,7 @@ import ProcessPayment from '../ProcessPayment/ProcessPayment';
 const BookingDetails = ({ service }) => {
     const history = useHistory();
     const logedInUser = JSON.parse(localStorage.getItem('user'))
+
 
     const handelPayment = (paymentId) => {
         const bookingDetails = {
@@ -34,6 +35,7 @@ const BookingDetails = ({ service }) => {
                 }
             });
     };
+
 
     return (
         <div className="pb-5">
