@@ -1,10 +1,13 @@
 import React from 'react';
 import { Col, Form, Row } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import ProcessPayment from '../ProcessPayment/ProcessPayment';
 
 const BookingDetails = ({ service }) => {
+    const history = useHistory();
 
-   const logedInUser = JSON.parse(localStorage.getItem('user'))
+
+    const logedInUser = JSON.parse(localStorage.getItem('user'))
 
     const handelPayment = (paymentId) => {
         const bookingDetails = {
@@ -29,12 +32,13 @@ const BookingDetails = ({ service }) => {
             .then((data) => {
                 if (data) {
                     alert("Your order place successfully");
+                    history.replace('/admin/customarBookingList');
                 }
             });
     };
 
     return (
-        <div className="mb-5">
+        <div className="pb-5">
             <Form className="col-md-8">
                 <Form.Group controlId="nameFild">
                     <Form.Label>Name</Form.Label>
@@ -63,7 +67,7 @@ const BookingDetails = ({ service }) => {
                                 type="text"
                                 readOnly
                                 placeholder="ServiceCharge"
-                                value={"$"+service.serviceCharge}
+                                value={"$" + service.serviceCharge}
                             />
                         </Form.Group>
                     </Col>
@@ -75,7 +79,7 @@ const BookingDetails = ({ service }) => {
                         readOnly
                         value={service.serviceName}
                     />
-                </Form.Group>              
+                </Form.Group>
             </Form>
             <ProcessPayment handelPayment={handelPayment} />
         </div>

@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ServiceCard from './ServiceCard/ServiceCard';
 import image from '../../../Image/Vector-Smart-Object-6.webp'
 
-
 const Services = () => {
-
     const [services, setServices] = useState([])
 
     useEffect(() => {

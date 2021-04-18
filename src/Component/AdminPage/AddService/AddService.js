@@ -8,7 +8,7 @@ import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
 
 
 const AddService = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
 

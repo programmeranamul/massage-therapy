@@ -5,7 +5,7 @@ import './CustomarBookingCard.css'
 const CustomarBookingCard = ({ booking }) => {
     const { service, serviceDescription, bookingStatus } = booking
     return (
-        <div className="col-md-6 px-5">
+        <div className="col-md-6 px-5 mb-4">
             <div className="card px-3 pt-2 pb-3">
                 <div className="d-flex justify-content-between align-items-center">
                     <div className="customar-order-image-container" >

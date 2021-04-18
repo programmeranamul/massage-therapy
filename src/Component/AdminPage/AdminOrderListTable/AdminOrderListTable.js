@@ -51,10 +51,10 @@ const AdminOrderListTable = ({ bookings }) => {
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu>
-                                            <Dropdown.Item onClick={(e) => handelStatusUpdate(e, booking)}>Painding</Dropdown.Item>
+                                            <Dropdown.Item onClick={(e) => handelStatusUpdate(e, booking)}>Painding</Dropdown.Item>  <Dropdown.Item onClick={(e) => handelStatusUpdate(e, booking)}>On going</Dropdown.Item>
                                             <Dropdown.Item onClick={(e) => handelStatusUpdate(e, booking)}>Done</Dropdown.Item>
-                                            <Dropdown.Item onClick={(e) => handelStatusUpdate(e, booking)}>On going</Dropdown.Item>
                                         </Dropdown.Menu>
+
                                     </Dropdown>
                                 </td>
                             </tr>
