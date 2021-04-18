@@ -8,7 +8,7 @@ const AdminBookingList = () => {
     const [bookings, setBookings] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:8000/adminBookingsList')
+        fetch('https://fathomless-retreat-05696.herokuapp.com/adminBookingsList')
             .then(res => res.json())
             .then(data => setBookings(data))
     }, [])

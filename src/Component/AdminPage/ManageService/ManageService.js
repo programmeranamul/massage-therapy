@@ -11,7 +11,7 @@ const ManageService = () => {
     const [services, setServices] = useState([])
 
     const fetchServices = () => {
-        fetch('http://localhost:8000/services')
+        fetch('https://fathomless-retreat-05696.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }
@@ -24,7 +24,7 @@ const ManageService = () => {
 
     const handelDeletProduct = (productId) => {
         fetch(
-            `http://localhost:8000/deletService/${productId}`,
+            `https://fathomless-retreat-05696.herokuapp.com/deletService/${productId}`,
             {
                 method: "delete",
                 headers: {

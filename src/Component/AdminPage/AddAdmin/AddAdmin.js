@@ -7,7 +7,7 @@ const AddAdmin = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:8000/addAdmin', {
+        fetch('https://fathomless-retreat-05696.herokuapp.com/addAdmin', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data)

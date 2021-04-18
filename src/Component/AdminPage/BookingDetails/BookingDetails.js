@@ -23,7 +23,7 @@ const BookingDetails = ({ service }) => {
             placeTime: new Date(),
         };
 
-        fetch("http://localhost:8000/bookingAservice", {
+        fetch("https://fathomless-retreat-05696.herokuapp.com/bookingAservice", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import image from '../../../Image/Vector-Smart-Object-6.webp'
 
 const SendMessage = () => {
 
@@ -11,6 +12,7 @@ const SendMessage = () => {
     return (
         <section className="conaict-section py-5">
             <div className="container">
+                <img className="mx-auto d-block" src={image} alt="Vector Icon" />
                 <article className="col-7 mx-auto text-center">
                     <h6 className="custom-color">CONTACT US</h6>
                     <h1>Always Connect with us</h1>

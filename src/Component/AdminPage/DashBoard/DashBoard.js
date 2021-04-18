@@ -14,6 +14,7 @@ import ManageService from '../ManageService/ManageService';
 import Booking from '../Booking/Booking';
 import CustomarBookingList from '../CustomarBookingList/CustomarBookingList'
 import AdminBookingList from '../AdminBookingList/AdminBookingList';
+import Welcome from '../Welcome/Welcome';
 
 const DashBoard = () => {
     const { path, url } = useRouteMatch();
@@ -27,7 +28,7 @@ const DashBoard = () => {
                 <div className="service-page-main-section">
                     <Switch>
                         <Route exact path={path}>
-                            <h3>Please select a topic.</h3>
+                            <Welcome />
                         </Route>
                         <Route path={`${path}/makeAdmin`}>
                             <AddAdmin />

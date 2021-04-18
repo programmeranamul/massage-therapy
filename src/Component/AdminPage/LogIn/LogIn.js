@@ -8,6 +8,7 @@ import './LogIn.css'
 import firebaseConfig from './Firebase.Config'
 import { userContext } from '../../../App';
 import NavBar from '../../ShearComponent/NavBar/NavBar';
+import Footer from '../../ShearComponent/Footer/Footer';
 
 
 if (!firebase.apps.length) {
@@ -68,12 +69,12 @@ const LogIn = () => {
     return (
         <>
         <NavBar/>
-        <section className="container LogIn-Section">
-            <div className="row  mt-5 text-left justify-content-center">
+        <section className="container LogIn-Section my-5">
+            <div className="row text-left justify-content-center">
                 <div className="col-md-6">
                     <h4 className="text-center mb-4 mt-5">Continue With Google</h4>
                     <button
-                        className="login-button py-2 w-100 text-left btn-danger"
+                        className="login-button py-2 mb-5 w-100 text-left btn-danger"
                         onClick={handelGoogleSingIn}
                     ><FontAwesomeIcon icon={faGoogle} className="google-icon" />Continue With Google</button>
                     {logedInUser.isError && (
@@ -82,6 +83,7 @@ const LogIn = () => {
                 </div>
             </div>
         </section>
+        <Footer />
         </>
     );
 };

@@ -1,12 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCog, faSignOutAlt, faCalendar, faGripHorizontal, faUsers } from "@fortawesome/free-solid-svg-icons";
-import { faFileAlt } from "@fortawesome/free-regular-svg-icons";
+import {faSignOutAlt, faCalendar, faGripHorizontal, faUsers } from "@fortawesome/free-solid-svg-icons";
 import './SideBar.css'
 import logo from '../../../Image/logo1.png'
-import { userContext } from '../../../App';
+
 import firebase from "firebase/app";
+
 
 
 const SideBar = ({ url }) => {
@@ -18,7 +18,7 @@ const SideBar = ({ url }) => {
     const [isAdmin, setIsAdmin] = useState(false)
 
     useEffect(() => {
-        fetch('http://localhost:8000/isAdmin', {
+        fetch('https://fathomless-retreat-05696.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: logInUser.email })
@@ -26,8 +26,6 @@ const SideBar = ({ url }) => {
             .then(res => res.json())
             .then(data => setIsAdmin(data))
     }, [])
-
-    console.log(isAdmin)
 
 
     const handelLogOut = () => {
