@@ -43,7 +43,7 @@ const AdminOrderListTable = ({ bookings }) => {
                                 <td>{booking.name}</td>
                                 <td>{booking.email}</td>
                                 <td>{booking.service}</td>
-                                <td>{booking.serviceDescription}</td>
+                                <td>Creaddit Card</td>
                                 <td>
                                     <Dropdown>
                                         <Dropdown.Toggle variant="success" id="dropdown-basic">

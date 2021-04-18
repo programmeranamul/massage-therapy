@@ -57,7 +57,6 @@ const SplitCardForm = ({ handelPayment }) => {
 
 
         if (error) {
-            console.log(error)
             setPaymentError(error.message)
             setPaymentSuccess(null)
         } else {

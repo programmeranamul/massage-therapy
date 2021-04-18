@@ -13,8 +13,6 @@ const AdminBookingList = () => {
             .then(data => setBookings(data))
     }, [])
 
-    console.log(bookings)
-
 
     return (
         <section className="admin-order-list">

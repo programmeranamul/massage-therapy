@@ -1,15 +1,10 @@
 import React from 'react';
 import { Col, Form, Row } from 'react-bootstrap';
-import { useForm } from "react-hook-form";
 import ProcessPayment from '../ProcessPayment/ProcessPayment';
 
 const BookingDetails = ({ service }) => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const logedInUser = JSON.parse(localStorage.getItem('user'))
-
-    const onSubmit = (data) => { }
-
+   const logedInUser = JSON.parse(localStorage.getItem('user'))
 
     const handelPayment = (paymentId) => {
         const bookingDetails = {
@@ -38,24 +33,16 @@ const BookingDetails = ({ service }) => {
             });
     };
 
-
-
-
-
     return (
-        <div>
-            <Form onSubmit={handleSubmit(onSubmit)} className="col-md-8">
+        <div className="mb-5">
+            <Form className="col-md-8">
                 <Form.Group controlId="nameFild">
                     <Form.Label>Name</Form.Label>
                     <Form.Control
-                        defaultValue={logedInUser.displayName}
+                        value={logedInUser.displayName}
                         type="text"
                         placeholder="Name"
-                        {...register("name", { required: true })}
                     />
-                    {errors?.name?.type === "required" && (
-                        <p className="text-danger">This field is required</p>
-                    )}
                 </Form.Group>
                 <Row>
                     <Col>
@@ -63,30 +50,20 @@ const BookingDetails = ({ service }) => {
                             <Form.Label>Email</Form.Label>
                             <Form.Control
                                 type="text"
-                                defaultValue={logedInUser.email}
                                 placeholder="Email"
-                                {...register("email", {
-                                    required: true,
-                                    pattern: /^\S+@\S+\.\S+$/
-                                })}
+                                value={logedInUser.email}
                             />
-                            {errors?.email?.type === "required" && (
-                                <p className="text-danger">This field is required</p>
-                            )}
-                            {errors?.email?.type === "pattern" && (
-                                <p className="text-danger">Write a valid e-mail</p>
-                            )}
                         </Form.Group>
 
                     </Col>
                     <Col>
-                        <Form.Group controlId="emailFild">
-                            <Form.Label>Email</Form.Label>
+                        <Form.Group controlId="serviceChargelFild">
+                            <Form.Label>Service Charge</Form.Label>
                             <Form.Control
                                 type="text"
                                 readOnly
-                                defaultValue={"$"+ service.serviceCharge}
                                 placeholder="ServiceCharge"
+                                value={"$"+service.serviceCharge}
                             />
                         </Form.Group>
                     </Col>
@@ -95,20 +72,10 @@ const BookingDetails = ({ service }) => {
                 <Form.Group controlId="serviceNameFild">
                     <Form.Label>Service Name</Form.Label>
                     <Form.Control
-                        defaultValue={service.serviceName}
                         readOnly
-                        {...register("serviceName", { required: true })} placeholder="Service Name" type="text" />
-
-                    {errors?.serviceName?.type === "required" && (
-                        <p className="text-danger">This field is required</p>
-                    )}
-                </Form.Group>
-
-                <input
-                    type="submit"
-                    className="btn btn-success ml-auto d-block mt-3"
-                    value="Submit"
-                />
+                        value={service.serviceName}
+                    />
+                </Form.Group>              
             </Form>
             <ProcessPayment handelPayment={handelPayment} />
         </div>

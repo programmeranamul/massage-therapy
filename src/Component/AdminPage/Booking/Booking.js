@@ -19,12 +19,13 @@ const Booking = () => {
    
 
     return (
-        <section className="book-page pl-5">
+        <section className="book-page">
             <AdminPageTitle title={"Book"} />
+
             {
-                id ? <div className="add-service-form-container">
+                id ? <div className="add-service-form-container pl-5">
                     <BookingDetails service={service} />
-                </div> : <div className="px-5">
+                </div> : <div className="pl-5">
                     <h4>You have no any selected service.</h4>
                     <h5 className="mt-3">Pleaser go home page and select a service.</h5>
                     <Link className="btn btn-primary mt-3" as={Link} to="/">Back To Home</Link>

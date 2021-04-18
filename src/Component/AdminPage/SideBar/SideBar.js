@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faSignOutAlt, faCalendar, faGripHorizontal, faUsers } from "@fortawesome/free-solid-svg-icons";
+import {faSignOutAlt, faPlus, faGripHorizontal, faUsers, faComments, faList } from "@fortawesome/free-solid-svg-icons";
 import './SideBar.css'
 import logo from '../../../Image/logo1.png'
 
@@ -49,40 +49,40 @@ const SideBar = ({ url }) => {
                 {isAdmin ? <div>
                     <li >
                         <Link to={`${url}/adminBookingList`}>
-                            <FontAwesomeIcon icon={faGripHorizontal} /> <span>Booking List</span>
+                            <FontAwesomeIcon icon={faList} /> <span>Booking List</span>
                         </Link>
                     </li>
 
                     <li>
                         <Link to={`${url}/makeAdmin`} >
-                            <FontAwesomeIcon icon={faCalendar} /> <span>Add Admin</span>
+                            <FontAwesomeIcon icon={faUsers} /> <span>Add Admin</span>
                         </Link>
                     </li>
                     <li>
                         <Link to={`${url}/addService`} >
-                            <FontAwesomeIcon icon={faUsers} /> <span>Add Service</span>
+                            <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>
                         </Link>
                     </li>
                     <li>
                         <Link to={`${url}/manageService`} >
-                            <FontAwesomeIcon icon={faUsers} /> <span>Manage Service</span>
+                            <FontAwesomeIcon icon={faGripHorizontal} /> <span>Manage Service</span>
                         </Link>
                     </li>
                 </div> : <div>
 
                     <li >
                         <Link to={`${url}/booking`}>
-                            <FontAwesomeIcon icon={faGripHorizontal} /> <span>Book</span>
+                            <FontAwesomeIcon icon={faPlus} /> <span>Book</span>
                         </Link>
                     </li>
                     <li >
                         <Link to={`${url}/customarBookingList`}>
-                            <FontAwesomeIcon icon={faGripHorizontal} /> <span>Booking List</span>
+                            <FontAwesomeIcon icon={faList} /> <span>Booking List</span>
                         </Link>
                     </li>
                     <li >
                         <Link to={`${url}/review`}>
-                            <FontAwesomeIcon icon={faGripHorizontal} /> <span>Review</span>
+                            <FontAwesomeIcon icon={faComments} /> <span>Review</span>
                         </Link>
                     </li>
                 </div>
