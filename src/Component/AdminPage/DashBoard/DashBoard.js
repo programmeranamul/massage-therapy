@@ -28,7 +28,7 @@ const DashBoard = () => {
                 <div className="service-page-main-section">
                     <Switch>
                         <Route exact path={path}>
-                            <Welcome />
+                        <Welcome />
                         </Route>
                         <Route path={`${path}/makeAdmin`}>
                             <AddAdmin />
